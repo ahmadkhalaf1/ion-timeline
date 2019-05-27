@@ -2,5 +2,5 @@
 Simple Timeline component for ionic 4
 # install
 ```npm install```
-#running
+# running
 ```ionic serve```
