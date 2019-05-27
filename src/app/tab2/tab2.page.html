@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button [color]="dark" [text]="" [icon]="add"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary" class="time-icon">
+      <ion-button>
+        <ion-icon size="large" name="time"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title text-center>Wurmtest</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <timeline >
+    <timeline-item *ngFor="let item of items;index as i">
+      <ion-icon [name]="item.icon" [style.background]="item.iconColor"></ion-icon>
+      <ion-card [ngClass]="item.card ? 'card-item' : 'no-card' ">
+        <ion-card-header>
+          {{item.title}}
+        </ion-card-header>
+        <ion-card-content  [ngClass]="isMenuOpen[i] ? 'active' : 'inactive'">
+          {{item.content}}
+        </ion-card-content>
+        <ion-grid *ngIf="item.card"  class="card-footer">
+        <ion-row (click)="toggleAccordion(i)">
+          <ion-col>
+            <p>mehr lesen</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      </ion-card>
+    </timeline-item>
+  </timeline>
+</ion-content>

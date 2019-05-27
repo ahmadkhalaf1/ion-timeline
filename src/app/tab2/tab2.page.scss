@@ -1,0 +1,18 @@
+.time-icon {
+  height: 48px;
+  ion-button {
+    height: 48px;
+  }
+  ion-icon {
+    border: 3px solid #0bb8cc;
+    border-radius: 50%;
+  }
+}
+
+.active {
+  display: block !important;
+}
+
+.inactive {
+  display: -webkit-box !important;
+}
