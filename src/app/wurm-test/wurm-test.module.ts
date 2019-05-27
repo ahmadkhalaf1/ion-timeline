@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab2Page } from './tab2.page';
+import { WurmTestPage } from './wurm-test.page';
 
 import { ComponentModules } from '../components/components.modules';
 
@@ -13,8 +13,8 @@ import { ComponentModules } from '../components/components.modules';
     CommonModule,
     FormsModule,
     ComponentModules,
-    RouterModule.forChild([{ path: '', component: Tab2Page }]),
+    RouterModule.forChild([{ path: '', component: WurmTestPage }]),
   ],
-  declarations: [Tab2Page]
+  declarations: [WurmTestPage]
 })
-export class Tab2PageModule {}
+export class WurmTestPageModule {}
